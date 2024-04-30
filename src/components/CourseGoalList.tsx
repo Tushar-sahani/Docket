@@ -20,7 +20,10 @@ export default function CourseGoalList({
   let warning:ReactNode;
 
   if(goals.length === 4){
-    warning = <InfoBox mode='warning'>Your'r collecting a lot of goals. Don't put too much on your plate!</InfoBox>
+    warning = <InfoBox mode='warning' severity='medium'>Your'r collecting a lot of goals. Don't put too much on your plate!</InfoBox>
+  }
+  if(goals.length>=5){
+    warning = <InfoBox mode='warning' severity='high'>You will not complete these much goal. Don't put more!</InfoBox>
   }
   return (
     <>
